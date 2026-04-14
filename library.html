@@ -10,10 +10,10 @@
 
   <!-- Navbar -->
   <header>
-    <nav>
-      <div>
-        <a href="index.html">Page<span>Turner</span></a>
-        <ul role="list">
+    <nav class="navbar" >
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">Page<span>Turner</span></a>
+        <ul class="nav-links" role="list">
           <li><a href="index.html">Home</a></li>
           <li><a href="library.html">Library</a></li>
           <li><a href="community.html">Community</a></li>
@@ -23,16 +23,16 @@
   </header>
 
   <main>
-    <section>
+    <section class="section">
 
-      <div>
-        <h2>The Library</h2>
-        <span aria-live="polite" style="font-size:0.82rem;color:var(--muted);"></span>
+      <div class="section-header">
+        <h2 id="library-heading">The Library</h2>
+        <span id="result-count" aria-live="polite" style="font-size:0.82rem;color:var(--muted);"></span>
       </div>
 
       <!-- Search -->
-      <div>
-        <span aria-hidden="true">
+      <div class="search-wrap">
+        <span class="search-icon" aria-hidden="true">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
                stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round">
@@ -41,27 +41,32 @@
         </span>
         <input
           type="search"
+          class="search-input"
+          id="search-input"
           placeholder="Search by title or author&hellip;"
           autocomplete="off"
         />
       </div>
 
-      <!-- Genre Filter -->
-      <div role="group">
-        <button data-genre="All" type="button">All</button>
-        <button data-genre="Fiction" type="button">Fiction</button>
-        <button data-genre="Non-Fiction" type="button">Non-Fiction</button>
-        <button data-genre="Mystery" type="button">Mystery</button>
-        <button data-genre="Sci-Fi" type="button">Sci-Fi</button>
-        <button data-genre="Biography" type="button">Biography</button>
+      <!-- Genre Filter
+           Mobile:  horizontal-scroll pill bar
+           Desktop: underline tab strip (see style.css for the drastic layout change)
+      -->
+      <div class="filter-bar" id="filter-bar" role="group" >
+        <button class="filter-btn active" data-genre="All"         type="button">All</button>
+        <button class="filter-btn"        data-genre="Fiction"     type="button">Fiction</button>
+        <button class="filter-btn"        data-genre="Non-Fiction" type="button">Non-Fiction</button>
+        <button class="filter-btn"        data-genre="Mystery"     type="button">Mystery</button>
+        <button class="filter-btn"        data-genre="Sci-Fi"      type="button">Sci-Fi</button>
+        <button class="filter-btn"        data-genre="Biography"   type="button">Biography</button>
       </div>
 
-      <!-- Cards Grid -->
-      <div aria-live="polite"></div>
+      <!-- Cards Grid (populated by gallery.js) -->
+      <div class="cards-grid" id="cards-grid" aria-live="polite"></div>
 
       <!-- Empty State -->
-      <div role="status">
-        <div aria-hidden="true">
+      <div class="empty-state" id="empty-state" role="status">
+        <div class="empty-state-icon" aria-hidden="true">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
                stroke="currentColor" stroke-width="1.5"
                stroke-linecap="round" stroke-linejoin="round">
@@ -76,10 +81,10 @@
   </main>
 
   <!-- Footer -->
-  <footer>
-    <div>
-      <span>Page<span>Turner</span></span>
-      <p>A curated portal for book lovers &mdash; &copy; 2026</p>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-logo">Page<span>Turner</span></span>
+      <p class="footer-copy">A curated portal for book lovers &mdash; &copy; 2026</p>
     </div>
   </footer>
 

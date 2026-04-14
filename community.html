@@ -10,10 +10,10 @@
 
   <!-- NAVBAR -->
   <header>
-    <nav aria-label="Main navigation">
-      <div>
-        <a href="index.html">Page<span>Turner</span></a>
-        <ul role="list">
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">Page<span>Turner</span></a>
+        <ul class="nav-links" role="list">
           <li><a href="index.html">Home</a></li>
           <li><a href="library.html">Library</a></li>
           <li><a href="community.html">Community</a></li>
@@ -23,17 +23,17 @@
   </header>
 
   <main>
-    <section aria-labelledby="community-heading">
+    <section class="section" aria-labelledby="community-heading">
 
-      <div>
-        <h2>Join the Book Club</h2>
+      <div class="section-header">
+        <h2 id="community-heading">Join the Book Club</h2>
       </div>
 
       <!-- Club Info Card -->
-      <div aria-label="Book club details">
+      <div class="club-grid" aria-label="Book club details">
 
-        <div>
-          <div aria-hidden="true">
+        <div class="club-card">
+          <div class="club-icon" aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="2"
                  stroke-linecap="round" stroke-linejoin="round">
@@ -49,8 +49,8 @@
           </div>
         </div>
 
-        <div>
-          <div aria-hidden="true">
+        <div class="club-card">
+          <div class="club-icon" aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="2"
                  stroke-linecap="round" stroke-linejoin="round">
@@ -64,8 +64,8 @@
           </div>
         </div>
 
-        <div>
-          <div aria-hidden="true">
+        <div class="club-card">
+          <div class="club-icon" aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="2"
                  stroke-linecap="round" stroke-linejoin="round">
@@ -79,8 +79,8 @@
           </div>
         </div>
 
-        <div>
-          <div aria-hidden="true">
+        <div class="club-card">
+          <div class="club-icon" aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="2"
                  stroke-linecap="round" stroke-linejoin="round">
@@ -99,44 +99,46 @@
 
       </div>
 
-      <hr style="margin-bottom: 2.5rem;" />
+      <hr class="divider" style="margin-bottom: 2.5rem;" />
 
-      <!-- Join Form -->
-      <div>
-        <div>
+      <!-- Join Form (hidden on success) -->
+      <div id="form-wrap">
+        <div class="form-shell">
           <h3>Tell us about yourself</h3>
 
-          <form novalidate aria-label="Book club join form">
-            <div>
+          <form id="join-form" novalidate aria-label="Book club join form">
+            <div class="form-grid">
 
               <!-- Full Name -->
-              <div>
+              <div class="form-group" id="group-name">
                 <label for="name">Full Name</label>
                 <input
                   type="text"
+                  id="name"
                   name="name"
                   placeholder="Jane Smith"
                   autocomplete="name"
                 />
-                <span role="alert"></span>
+                <span class="field-error" id="error-name" role="alert"></span>
               </div>
 
               <!-- Email -->
-              <div>
+              <div class="form-group" id="group-email">
                 <label for="email">Email Address</label>
                 <input
                   type="email"
+                  id="email"
                   name="email"
                   placeholder="jane@example.com"
                   autocomplete="email"
                 />
-                <span role="alert"></span>
+                <span class="field-error" id="error-email" role="alert"></span>
               </div>
 
               <!-- Genre -->
-              <div>
+              <div class="form-group" id="group-genre">
                 <label for="genre">Favourite Genre</label>
-                <select name="genre">
+                <select id="genre" name="genre">
                   <option value="" disabled selected>Select a genre&hellip;</option>
                   <option value="Fiction">Fiction</option>
                   <option value="Non-Fiction">Non-Fiction</option>
@@ -145,36 +147,38 @@
                   <option value="Biography">Biography</option>
                   <option value="Other">Other / Multiple</option>
                 </select>
-                <span role="alert"></span>
+                <span class="field-error" id="error-genre" role="alert"></span>
               </div>
 
               <!-- City -->
-              <div>
+              <div class="form-group" id="group-city">
                 <label for="city">City</label>
                 <input
                   type="text"
+                  id="city"
                   name="city"
                   placeholder="Toronto, ON"
                   autocomplete="address-level2"
                 />
-                <span role="alert"></span>
+                <span class="field-error" id="error-city" role="alert"></span>
               </div>
 
-              <!-- Message -->
-              <div>
-                <label>
+              <!-- Message (optional) -->
+              <div class="form-group full" id="group-message">
+                <label for="message">
                   Why do you want to join?
-                  <span>(optional)</span>
+                  <span class="optional">(optional)</span>
                 </label>
                 <textarea
+                  id="message"
                   name="message"
                   placeholder="Tell us a little about yourself and what you're reading lately&hellip;"
                 ></textarea>
               </div>
 
               <!-- Submit -->
-              <div>
-                <button type="submit">Join the Club</button>
+              <div class="form-group full">
+                <button type="submit" class="btn">Join the Club</button>
               </div>
 
             </div>
@@ -182,9 +186,9 @@
         </div>
       </div>
 
-      <!-- Success State -->
-      <div role="status" aria-live="polite">
-        <div aria-hidden="true">
+      <!-- Succes State -->
+      <div class="success-state" id="success-state" role="status" aria-live="polite">
+        <div class="success-icon" aria-hidden="true">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
                stroke="currentColor" stroke-width="2.5"
                stroke-linecap="round" stroke-linejoin="round">
@@ -202,10 +206,10 @@
   </main>
 
   <!-- Footer -->
-  <footer>
-    <div>
-      <span>Page<span>Turner</span></span>
-      <p>A curated portal for book lovers &mdash; &copy; 2026</p>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-logo">Page<span>Turner</span></span>
+      <p class="footer-copy">A curated portal for book lovers &mdash; &copy; 2026</p>
     </div>
   </footer>
 
