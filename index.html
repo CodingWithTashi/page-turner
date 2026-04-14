@@ -10,10 +10,10 @@
 
   <!-- Navbar -->
   <header>
-    <nav>
-      <div>
-        <a href="index.html">Page<span>Turner</span></a>
-        <ul role="list">
+    <nav class="navbar" >
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">Page<span>Turner</span></a>
+        <ul class="nav-links" role="list">
           <li><a href="index.html">Home</a></li>
           <li><a href="library.html">Library</a></li>
           <li><a href="community.html">Community</a></li>
@@ -25,79 +25,79 @@
   <main>
 
     <!-- Hero -->
-    <section>
-      <span>Your Reading Community</span>
-      <h1>Discover your next favourite book.</h1>
+    <section class="hero" >
+      <span class="hero-eyebrow">Your Reading Community</span>
+      <h1 id="hero-heading">Discover your next favourite book.</h1>
       <p>
         A curated library for readers who value good books without the noise.
         Browse by genre, get daily literary inspiration, and join our local book club.
       </p>
-      <a href="library.html">Browse the Library</a>
+      <a href="library.html" class="btn">Browse the Library</a>
     </section>
 
-    <hr />
+    <hr class="divider" />
 
     <!-- Staff Picks -->
-    <section>
-      <div>
-        <h2>Staff Picks</h2>
-        <a href="library.html">View all books</a>
+    <section class="section" >
+      <div class="section-header">
+        <h2 id="picks-heading">Staff Picks</h2>
+        <a href="library.html" class="btn btn-outline btn-sm">View all books</a>
       </div>
 
-      <div>
+      <div class="cards-grid">
 
-        <article>
-          <div>
+        <article class="card">
+          <div class="card-img">
             <img
               src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&q=80"
               alt="Book cover — The Midnight Library"
               loading="lazy"
             />
-            <span>Fiction</span>
+            <span class="card-badge">Fiction</span>
           </div>
-          <div>
-            <span>2020</span>
-            <h3>The Midnight Library</h3>
-            <p>Matt Haig</p>
-            <p>
+          <div class="card-body">
+            <span class="card-year">2020</span>
+            <h3 class="card-title">The Midnight Library</h3>
+            <p class="card-author">Matt Haig</p>
+            <p class="card-desc">
               Between life and death there is a library filled with every life you could have lived.
             </p>
           </div>
         </article>
 
-        <article>
-          <div>
+        <article class="card">
+          <div class="card-img">
             <img
               src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=600&q=80"
               alt="Book cover — Dune"
               loading="lazy"
             />
-            <span>Sci-Fi</span>
+            <span class="card-badge">Sci-Fi</span>
           </div>
-          <div>
-            <span>1965</span>
-            <h3>Dune</h3>
-            <p>Frank Herbert</p>
-            <p>
+          <div class="card-body">
+            <span class="card-year">1965</span>
+            <h3 class="card-title">Dune</h3>
+            <p class="card-author">Frank Herbert</p>
+            <p class="card-desc">
               An epic tale of politics, religion, and survival on a desert planet.
             </p>
           </div>
         </article>
 
-        <article>
-          <div>
+        <article class="card">
+          <div class="card-img">
             <img
               src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=600&q=80"
               alt="Book cover — Educated"
               loading="lazy"
             />
-            <span>Biography</span>
+            <span class="card-badge">Biography</span>
           </div>
-          <div>
-            <span>2018</span>
-            <h3>Educated</h3>
-            <p>Tara Westover</p>
-            <p>
+          <div class="card-body">
+            <span class="card-year">2018</span>
+            <h3 class="card-title">Educated</h3>
+            <p class="card-author">Tara Westover</p>
+            <p class="card-desc">
               A memoir of a young woman raised in the mountains of Idaho who escapes to Cambridge.
             </p>
           </div>
@@ -106,22 +106,22 @@
       </div>
     </section>
 
-    <hr />
+    <hr class="divider" />
 
     <!-- Quote Widget -->
-    <section>
-      <div>
-        <h2>Quote of the Day</h2>
+    <section class="section" >
+      <div class="section-header">
+        <h2 id="quote-heading">Quote of the Day</h2>
       </div>
 
-      <div aria-live="polite">
-        <p>Literary Inspiration</p>
-        <blockquote>
-          <span>Fetching today's quote&hellip;</span>
+      <div class="widget-wrap" id="quote-widget" aria-live="polite">
+        <p class="widget-label">Literary Inspiration</p>
+        <blockquote class="widget-quote" id="quote-text">
+          <span class="widget-loading">Fetching today's quote&hellip;</span>
         </blockquote>
-        <p></p>
-        <div>
-          <button type="button">
+        <p class="widget-author" id="quote-author"></p>
+        <div class="widget-footer">
+          <button class="btn btn-outline btn-sm" id="new-quote-btn" type="button">
             New Quote
           </button>
         </div>
@@ -131,10 +131,10 @@
   </main>
 
   <!-- Footer -->
-  <footer>
-    <div>
-      <span>Page<span>Turner</span></span>
-      <p>A curated portal for book lovers &mdash; &copy; 2026</p>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-logo">Page<span>Turner</span></span>
+      <p class="footer-copy">A curated portal for book lovers &mdash; &copy; 2026</p>
     </div>
   </footer>
 
