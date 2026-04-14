@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community — PageTurner</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav aria-label="Main navigation">
+      <div>
+        <a href="index.html">Page<span>Turner</span></a>
+        <ul role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="library.html">Library</a></li>
+          <li><a href="community.html">Community</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="community-heading">
+
+      <div>
+        <h2>Join the Book Club</h2>
+      </div>
+
+      <!-- Club Info Card -->
+      <div aria-label="Book club details">
+
+        <div>
+          <div aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8"  y1="2" x2="8"  y2="6"/>
+              <line x1="3"  y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Monthly Meetings</h4>
+            <p>Every first Saturday at 10:00 AM &mdash; in person or online</p>
+          </div>
+        </div>
+
+        <div>
+          <div aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            </svg>
+          </div>
+          <div>
+            <h4>One Book a Month</h4>
+            <p>We read one curated title together and discuss it as a group</p>
+          </div>
+        </div>
+
+        <div>
+          <div aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Weekly Digest</h4>
+            <p>Members receive a weekly email with recommendations and reading tips</p>
+          </div>
+        </div>
+
+        <div>
+          <div aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 12 20 22 4 22 4 12"/>
+              <rect x="2" y="7" width="20" height="5"/>
+              <line x1="12" y1="22" x2="12" y2="7"/>
+              <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/>
+              <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Free to Join</h4>
+            <p>No subscription, no fees &mdash; just a shared love of reading</p>
+          </div>
+        </div>
+
+      </div>
+
+      <hr style="margin-bottom: 2.5rem;" />
+
+      <!-- Join Form -->
+      <div>
+        <div>
+          <h3>Tell us about yourself</h3>
+
+          <form novalidate aria-label="Book club join form">
+            <div>
+
+              <!-- Full Name -->
+              <div>
+                <label for="name">Full Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Jane Smith"
+                  autocomplete="name"
+                />
+                <span role="alert"></span>
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="jane@example.com"
+                  autocomplete="email"
+                />
+                <span role="alert"></span>
+              </div>
+
+              <!-- Genre -->
+              <div>
+                <label for="genre">Favourite Genre</label>
+                <select name="genre">
+                  <option value="" disabled selected>Select a genre&hellip;</option>
+                  <option value="Fiction">Fiction</option>
+                  <option value="Non-Fiction">Non-Fiction</option>
+                  <option value="Mystery">Mystery</option>
+                  <option value="Sci-Fi">Sci-Fi</option>
+                  <option value="Biography">Biography</option>
+                  <option value="Other">Other / Multiple</option>
+                </select>
+                <span role="alert"></span>
+              </div>
+
+              <!-- City -->
+              <div>
+                <label for="city">City</label>
+                <input
+                  type="text"
+                  name="city"
+                  placeholder="Toronto, ON"
+                  autocomplete="address-level2"
+                />
+                <span role="alert"></span>
+              </div>
+
+              <!-- Message -->
+              <div>
+                <label>
+                  Why do you want to join?
+                  <span>(optional)</span>
+                </label>
+                <textarea
+                  name="message"
+                  placeholder="Tell us a little about yourself and what you're reading lately&hellip;"
+                ></textarea>
+              </div>
+
+              <!-- Submit -->
+              <div>
+                <button type="submit">Join the Club</button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Success State -->
+      <div role="status" aria-live="polite">
+        <div aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2.5"
+               stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <h3>You're in!</h3>
+        <p>
+          Welcome to the PageTurner Book Club. We will be in touch soon
+          with details about our next meeting and reading pick.
+        </p>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <span>Page<span>Turner</span></span>
+      <p>A curated portal for book lovers &mdash; &copy; 2026</p>
+    </div>
+  </footer>
+
+</body>
+</html>

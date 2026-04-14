@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library — PageTurner</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <div>
+        <a href="index.html">Page<span>Turner</span></a>
+        <ul role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="library.html">Library</a></li>
+          <li><a href="community.html">Community</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+
+      <div>
+        <h2>The Library</h2>
+        <span aria-live="polite" style="font-size:0.82rem;color:var(--muted);"></span>
+      </div>
+
+      <!-- Search -->
+      <div>
+        <span aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </span>
+        <input
+          type="search"
+          placeholder="Search by title or author&hellip;"
+          autocomplete="off"
+        />
+      </div>
+
+      <!-- Genre Filter -->
+      <div role="group">
+        <button data-genre="All" type="button">All</button>
+        <button data-genre="Fiction" type="button">Fiction</button>
+        <button data-genre="Non-Fiction" type="button">Non-Fiction</button>
+        <button data-genre="Mystery" type="button">Mystery</button>
+        <button data-genre="Sci-Fi" type="button">Sci-Fi</button>
+        <button data-genre="Biography" type="button">Biography</button>
+      </div>
+
+      <!-- Cards Grid -->
+      <div aria-live="polite"></div>
+
+      <!-- Empty State -->
+      <div role="status">
+        <div aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </div>
+        <h3>No books found</h3>
+        <p>Try a different search term or select a different genre.</p>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <span>Page<span>Turner</span></span>
+      <p>A curated portal for book lovers &mdash; &copy; 2026</p>
+    </div>
+  </footer>
+
+</body>
+</html>
