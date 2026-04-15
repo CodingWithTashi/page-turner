@@ -104,15 +104,6 @@ The site is built mobile-first. The most complex responsive component is the gen
 
 ![Layout Sketch](assets/sketch.png)
 
----
-
-## Challenges and Solutions
-
-**Challenge:** The genre filter tabs and the search bar needed to work together simultaneously. Applying one filter should not reset the other, and both needed to update the displayed cards on every change without duplicating render logic.
-
-**Solution:** I stored the active genre selection and the current search string as two separate module-level variables in `gallery.js`. Every time either input changed — a tab click or a keystroke — a single `filterBooks()` function ran and applied both conditions together using a chained `Array.filter()` with an AND condition. This kept all render logic in one place, ensured the two filters always stayed in sync, and avoided any redundant DOM updates.
-
----
 
 ## How to Run Locally
 
@@ -130,7 +121,7 @@ The site is built mobile-first. The most complex responsive component is the gen
 
 Deployed via Netlify with continuous deployment from the main branch on GitHub.
 
-- Live URL: _coming soon_
+- Live URL: https://bookpageturner.netlify.app/library
 
 ---
 
