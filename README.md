@@ -1,6 +1,6 @@
 # PageTurner — Book Lovers' Discovery Portal
 
-**Live Site:** _coming soon_
+**Live Site:** https://bookpageturner.netlify.app/
 
 ---
 
