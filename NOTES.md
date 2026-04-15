@@ -21,11 +21,6 @@ API key is missing or the request fails.
 
 ## Design Research
 
-Sources studied:
-- Penguin Books website — editorial, typography-first layout, serif headings
-- Literal.club — clean card grid for books, minimal UI
-- Are.na — calm, distraction-free browsing experience
-
 **Decisions:**
 - Heading font: `Georgia, serif` (system — no external request, literary feel)
 - Body font: `system-ui` (fast, OS-native, clean)
